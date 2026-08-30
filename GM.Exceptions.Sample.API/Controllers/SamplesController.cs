@@ -8,8 +8,8 @@ namespace GM.Exceptions.Sample.API.Controllers;
 /// status + ProblemDetails, with a message localized from Resources/GMExceptionsResource.resx.
 /// </summary>
 [ApiController]
-[Route("[controller]")]
-public class SamplesController : ControllerBase
+[Route("api/v1/[controller]")]
+public sealed class SamplesController : ControllerBase
 {
     /// <summary>404 Not Found — "Sample with property Id: 1 not found".</summary>
     [HttpGet("not-found")]
