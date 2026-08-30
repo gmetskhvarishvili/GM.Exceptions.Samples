@@ -38,9 +38,11 @@ dotnet run --project GM.Exceptions.Sample.API
 Then hit the endpoints (Swagger UI in Development), e.g.:
 
 ```bash
-curl -k https://localhost:7182/samples/not-found     # 404
-curl -k https://localhost:7182/samples/already-exists # 409
-curl -k https://localhost:7182/samples/validation     # 400 + errors
+curl -k https://localhost:7182/api/v1/samples/not-found     # 404
+curl -k https://localhost:7182/api/v1/samples/already-exists # 409
+curl -k https://localhost:7182/api/v1/samples/validation     # 400 + errors
+curl -k https://localhost:7182/health/live                   # liveness
+curl -k https://localhost:7182/health/ready                  # readiness
 ```
 
 ## Testing
